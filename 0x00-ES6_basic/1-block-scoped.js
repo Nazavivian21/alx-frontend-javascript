@@ -1,13 +1,4 @@
-export default function taskBlock(trueOrFalse) {
-  let task = false;
-  let task2 = true;
+import taskBlock from './1-block-scoped.js';
 
-  if (trueOrFalse) {
-    let task = true; // This is block-scoped
-    let task2 = false; // This is block-scoped
-  }
-
-  return [task, task2];
-}
-
- 
+console.log(taskBlock(true));  // Output: [false, true]
+console.log(taskBlock(false)); // Output: [false, true]

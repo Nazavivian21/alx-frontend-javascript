@@ -1,4 +1,11 @@
-import taskBlock from './1-block-scoped.js';
+export default function taskBlock(trueOrFalse) {
+  const task = false;
+  const task2 = true;
 
-console.log(taskBlock(true));  // Output: [false, true]
-console.log(taskBlock(false)); // Output: [false, true]
+  if (trueOrFalse) {
+    const task = true; // Block-scoped
+    const task2 = false; // Block-scoped
+  }
+
+  return [task, task2];
+}

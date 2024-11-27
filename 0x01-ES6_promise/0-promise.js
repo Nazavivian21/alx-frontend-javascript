@@ -9,8 +9,3 @@ function getResponseFromAPI() {
       }
   });
 }
-
-// Example usage:
-getResponseFromAPI()
-  .then((response) => console.log(response)) // Logs "API response received!" if successful
-  .catch((error) => console.error(error));   // Logs "Failed to fetch API response." if rejected

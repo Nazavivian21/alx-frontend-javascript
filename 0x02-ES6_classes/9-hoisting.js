@@ -1,3 +1,5 @@
+// 9-hoisting.js
+
 export class ALXClass {
   constructor(year, location) {
     this._year = year;
@@ -29,6 +31,7 @@ export class StudentALX {
   }
 
   get fullStudentDescription() {
+    console.log(`Generating description for: ${this._firstName} ${this._lastName}`);
     return `${this._firstName} ${this._lastName} - ${this._alxClass.year} - ${this._alxClass.location}`;
   }
 }
@@ -43,6 +46,9 @@ const student2 = new StudentALX('John', 'Doe', class2020);
 const student3 = new StudentALX('Albert', 'Clinton', class2019);
 const student4 = new StudentALX('Donald', 'Bush', class2019);
 const student5 = new StudentALX('Jason', 'Sandler', class2019);
+
+// Log the number of students in the array for debugging
+console.log(`Total students: ${[student1, student2, student3, student4, student5].length}`);
 
 // Export the list of students
 export const listOfStudents = [student1, student2, student3, student4, student5];

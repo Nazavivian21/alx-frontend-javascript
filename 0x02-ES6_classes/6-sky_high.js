@@ -2,8 +2,8 @@ import Building from './5-building.js';
 
 export default class SkyHighBuilding extends Building {
   constructor(sqft, floors) {
-    super(sqft); // Call the parent class constructor with sqft
-    this._floors = floors;
+    super(sqft);  // Call the parent class constructor to handle sqft
+    this._floors = floors;  // Store the number of floors in _floors
   }
 
   // Getter for floors
@@ -11,7 +11,7 @@ export default class SkyHighBuilding extends Building {
     return this._floors;
   }
 
-  // Override evacuationWarningMessage method
+  // Override the evacuationWarningMessage method
   evacuationWarningMessage() {
     return `Evacuate slowly the ${this.floors} floors.`;
   }
